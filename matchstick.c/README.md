@@ -1,8 +1,6 @@
 # Matchstick - Leave the last matchstick!
 
 - **Binary name:** matchstick
-- **Repository name:** CPE_matchstick_2017
-- **Repository rights:** ramassage-tek
 - **Language:** C
 - **Compilation:** via Makefile, including re, clean and fclean rules
 
@@ -230,6 +228,5 @@ Error: not enough matches on this line
 
 ## Authorized functions
 
-- read, write, malloc, free, time, getpid, random, srandom
+- read, write, malloc, free, time, getpid, random, srandom and getline
 
-> :exclamation: srand and rand is not the same function of srandom and random!
