@@ -1,4 +1,4 @@
-# :fire: Matchstick - Leave the last matchstick!
+# Matchstick - Leave the last matchstick!
 
 - **Binary name:** matchstick
 - **Repository name:** CPE_matchstick_2017
@@ -27,13 +27,6 @@ In case of bad input, you must ask for the line by displaying **Line:** " again,
 
 > :exclamation: If the user wins, the program must return 1.<br />
 > If the AI wins, it must return 2.
-
-# Bonus
-
-Here is a list of bonuses you may implement (in the bonus, built with a separate Makefile’s rule):
-- a graphical interface,
-- a more complete game, with score and several levels of difficulty,
-- a human-machine interface device (such as a leap motion for instance) to select and remove the matchsticks.
 
 # Examples
 
@@ -205,12 +198,6 @@ Line: 0
 Error: this line is out of range
 Line: %
 
-∼/B-CPE-200> echo $?
-0
-# In the previous example, the last input was an EOF (you can simulate it with the keyboard combination ctrl+d).
-```
-
-```
 ∼/B-CPE-200> ./matchstick 2 5
 *****
 * | *
