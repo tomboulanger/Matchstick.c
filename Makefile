@@ -26,6 +26,7 @@ all:	$(NAME)
 $(NAME):	$(OBJ)
 	make -C lib/my/
 	$(CC) -o $(NAME) $(OBJ) $(LDFLAGS)
+	rm -f src/*.o
 
 clean:
 	make -C lib/my/ clean

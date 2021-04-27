@@ -17,7 +17,6 @@ void init_struct(v_var *a, char **av)
     a->status = 0;
     a->lines = my_getnbr(av[1]);
     a->player = 0;
-    a->get = 0;
     a->ia = 0;
     a->status_error = 0;
     a->victory = 0;
@@ -55,9 +54,11 @@ int my_getline(v_var *a)
     return (value);
 }
 
-void main2(v_var *a, char **map)
+int main2(v_var *a, char **map)
 {
     while (a->game == 0) {
+        if (player_one(a, map) == 44)
+            return (44);
         map = game_map(a, map);
         print(map, a);
         victory(a, map);
@@ -69,6 +70,7 @@ void main2(v_var *a, char **map)
         if (a->victory == 1)
             break;
     }
+    return (0);
 }
 
 int error_argument(v_var *a, char **av, int ac)

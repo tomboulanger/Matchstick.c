@@ -17,7 +17,8 @@ int main(int ac, char **av)
     init_struct(a, av);
     map = matchstick(a, av);
     print(map, a);
-    main2(a, map);
+    if (main2(a, map) == 44)
+        return (0);
     if (a->victory == 1)
         return (1);
     if (a->victory == 2)
@@ -26,16 +27,21 @@ int main(int ac, char **av)
     free(a);
 }
 
-void player_one(v_var *a, char **map)
+int player_one(v_var *a, char **map)
 {
     my_putchar('\n');
     my_putstr("Your turn:\n");
     error_player_one_line(a, map);
+    if (a->line == 1488)
+        return (44);
+    if (a->nb_sticks == 1488)
+        return (44);
     my_putstr("Player removed ");
     my_put_nbr(a->nb_sticks);
     my_putstr(" match(es) from line ");
     my_put_nbr(a->line);
     my_putchar('\n');
+    return (0);
 }
 
 int player_two(v_var *a, char **map)

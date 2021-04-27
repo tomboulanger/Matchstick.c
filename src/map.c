@@ -14,7 +14,6 @@ char **game_map(v_var *a, char **map)
     int nb_spaces = 0;
     int matches;
 
-    player_one(a, map);
     while (a->status == 0) {
         if (map[a->line][lenght] == ' ') {
             nb_spaces++;
